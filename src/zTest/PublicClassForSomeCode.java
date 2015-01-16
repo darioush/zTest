@@ -7,6 +7,7 @@ public class PublicClassForSomeCode {
 	}
 	
 	public int otherMethod(int x, int y) {
+		
 		return x / y;
 	}
 }
