@@ -15,6 +15,9 @@ public class PublicClassForSomeCode {
 	
 	static class StaticInnerClass {
 		public int otherMethod(int x, int y) {
+			if (y == 0) {
+				return 0;
+			}
 			return x / y;
 		}	
 	}
