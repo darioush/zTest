@@ -1,0 +1,29 @@
+<project basedir="." default="compile" name="zTest">
+    <path id="zTest.classpath">
+        <pathelement location="bin"/>
+        <pathelement location="lib/junit-4.11.jar" />
+    </path>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target name="compile">
+        <mkdir dir="bin" />
+        <javac debug="true" debuglevel="source,lines,vars" destdir="bin" includeantruntime="false">
+            <src path="src"/>
+            <src path="test"/>
+            <classpath refid="zTest.classpath"/>
+        </javac>
+    </target>
+    <target description="test" name="test" depends="compile">
+        <junit printsummary="true">
+            <classpath>
+                <path refid="zTest.classpath" />
+            </classpath>
+            <batchtest>
+                <fileset dir="bin">
+                    <include name="**/Test*.class" />
+                </fileset>
+            </batchtest>
+        </junit>
+    </target>
+</project>
