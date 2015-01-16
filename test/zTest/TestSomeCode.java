@@ -17,5 +17,11 @@ public class TestSomeCode {
 		PublicClassForSomeCode code = new PublicClassForSomeCode();
 		code.otherMethod(10, 0);
 	}
+	
+	@Test
+	public void testBugNopubClass() {
+		ClassForSomeCode code = new ClassForSomeCode();
+		code.otherMethod(10, 0);
+	}
 
 }
