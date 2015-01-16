@@ -12,6 +12,12 @@ public class PublicClassForSomeCode {
 		}
 		return x / y;
 	}
+	
+	static class StaticInnerClass {
+		public int otherMethod(int x, int y) {
+			return x / y;
+		}	
+	}
 }
 
 class ClassForSomeCode {
