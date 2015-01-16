@@ -10,11 +10,16 @@
         <mkdir dir="bin" />
         <javac debug="true" debuglevel="source,lines,vars" destdir="bin" includeantruntime="false">
             <src path="src"/>
+            <classpath refid="zTest.classpath"/>
+        </javac>
+    </target>
+    <target name="compile.test" depends="compile">
+        <javac debug="true" debuglevel="source,lines,vars" destdir="bin" includeantruntime="false">
             <src path="test"/>
             <classpath refid="zTest.classpath"/>
         </javac>
     </target>
-    <target description="test" name="test" depends="compile">
+    <target description="test" name="test" depends="compile.test">
         <junit printsummary="true">
             <classpath>
                 <path refid="zTest.classpath" />
