@@ -11,5 +11,11 @@ public class TestSomeCode {
 		PublicClassForSomeCode code = new PublicClassForSomeCode();
 		code.otherMethod(10, 20);
 	}
+	
+	@Test
+	public void testBug() {
+		PublicClassForSomeCode code = new PublicClassForSomeCode();
+		code.otherMethod(10, 0);
+	}
 
 }
