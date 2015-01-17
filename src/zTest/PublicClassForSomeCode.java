@@ -30,6 +30,15 @@ public class PublicClassForSomeCode {
 			return x / y;
 		}
 	}
+	
+	public void anonInner(final int x, final int y) {
+		new StaticInnerClass() { 
+			@Override
+			public int otherMethod(int x, int y) {
+				return x / y;
+			}
+		}.otherMethod(x, y);
+	}
 }
 
 class ClassForSomeCode {
