@@ -30,4 +30,12 @@ public class TestSomeCode {
 		PublicClassForSomeCode.StaticInnerClass code = new PublicClassForSomeCode.StaticInnerClass();
 		code.otherMethod(10, 0);
 	}
+	
+	@Test
+	public void testBugInnerClass() {
+		PublicClassForSomeCode code = new PublicClassForSomeCode();
+		PublicClassForSomeCode.InnerClass inner =  code.new InnerClass();
+		
+		inner.otherMethod(10, 0);
+	}
 }
