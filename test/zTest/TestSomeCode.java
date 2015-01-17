@@ -38,4 +38,11 @@ public class TestSomeCode {
 		
 		inner.otherMethod(10, 0);
 	}
+	
+	@Test
+	public void testBugAnonInner() {
+		PublicClassForSomeCode code = new PublicClassForSomeCode();
+		code.anonInner(10, 0);
+	}
+	
 }
