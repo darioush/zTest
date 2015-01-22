@@ -2,6 +2,10 @@ package zTest;
 
 
 public class PublicClassForSomeCode {
+
+	public static int X = 10;
+	public static int Y = 10;
+
 	public void someMethod() {
 		System.out.println("Hello world");
 	}
