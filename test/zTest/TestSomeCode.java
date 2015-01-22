@@ -45,4 +45,11 @@ public class TestSomeCode {
 		code.anonInner(10, 0);
 	}
 	
+	@Test
+	public void testBugInitializerStatic() {
+		int oldY = PublicClassForSomeCode.Y;
+		PublicClassForSomeCode.Y = 0;
+		new InitializerClass().bar();
+		PublicClassForSomeCode.Y = oldY;
+	}
 }

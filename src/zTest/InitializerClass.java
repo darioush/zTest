@@ -4,7 +4,7 @@ public class InitializerClass {
 
 	public static int foo;
 	static {
-		foo = PublicClassForSomeCode.X / PublicClassForSomeCode.Y;
+		foo = PublicClassForSomeCode.Y == 0 ? 0 : PublicClassForSomeCode.X / PublicClassForSomeCode.Y;
 	}
 	
 	public int bar() {
