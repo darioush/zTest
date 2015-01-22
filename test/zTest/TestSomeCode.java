@@ -52,4 +52,13 @@ public class TestSomeCode {
 		new InitializerClass().bar();
 		PublicClassForSomeCode.Y = oldY;
 	}
+	
+	@Test
+	public void testBugInitializerFieldStatic() {
+		int oldY = PublicClassForSomeCode.Y;
+		PublicClassForSomeCode.Y = 0;
+		new InitializerClass2().bar();
+		PublicClassForSomeCode.Y = oldY;
+	}
+
 }
