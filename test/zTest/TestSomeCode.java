@@ -65,4 +65,9 @@ public class TestSomeCode {
 	public void testBugInitializer() {
 		new InitializerClass3().bar();
 	}
+
+	@Test
+	public void testBugInitializerField() {
+		new InitializerClass4().bar();
+	}
 }
