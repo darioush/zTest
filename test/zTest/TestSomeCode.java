@@ -61,4 +61,8 @@ public class TestSomeCode {
 		PublicClassForSomeCode.Y = oldY;
 	}
 
+	@Test
+	public void testBugInitializer() {
+		new InitializerClass3().bar();
+	}
 }
